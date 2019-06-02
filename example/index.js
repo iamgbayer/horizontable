@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import Horizontable from '../src/index'
 
 const style = {
@@ -36,4 +36,4 @@ function Example() {
   )
 }
 
-ReactDOM.render(<Example />, document.getElementById('app'))
+render(<Example />, document.getElementById('app'))
