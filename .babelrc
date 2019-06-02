@@ -1,0 +1,13 @@
+{
+  "presets": ["@babel/preset-react"],
+  "plugins": [
+    "@babel/plugin-transform-modules-commonjs",
+    "@babel/plugin-transform-spread",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-syntax-import-meta",
+    "@babel/plugin-proposal-function-sent",
+    "@babel/plugin-proposal-export-namespace-from",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-logical-assignment-operators"
+  ]
+}
