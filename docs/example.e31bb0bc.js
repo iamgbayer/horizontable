@@ -2249,9 +2249,9 @@ if ("development" !== "production") {
 'use strict';
 
 if ("development" === 'production') {
-  module.exports = require('./cjs/react.production.min.js.js');
+  module.exports = require('./cjs/react.production.min.js.js.js');
 } else {
-  module.exports = require('./cjs/react.development.js.js');
+  module.exports = require('./cjs/react.development.js.js.js');
 }
 },{"./cjs/react.development.js":"../node_modules/react/cjs/react.development.js"}],"../node_modules/scheduler/cjs/scheduler.development.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -2970,9 +2970,9 @@ if ("development" !== "production") {
 'use strict';
 
 if ("development" === 'production') {
-  module.exports = require('./cjs/scheduler.production.min.js.js');
+  module.exports = require('./cjs/scheduler.production.min.js.js.js');
 } else {
-  module.exports = require('./cjs/scheduler.development.js.js');
+  module.exports = require('./cjs/scheduler.development.js.js.js');
 }
 },{"./cjs/scheduler.development.js":"../node_modules/scheduler/cjs/scheduler.development.js"}],"../node_modules/scheduler/cjs/scheduler-tracing.development.js":[function(require,module,exports) {
 /** @license React v0.13.6
@@ -3366,9 +3366,9 @@ if ("development" !== "production") {
 'use strict';
 
 if ("development" === 'production') {
-  module.exports = require('./cjs/scheduler-tracing.production.min.js.js');
+  module.exports = require('./cjs/scheduler-tracing.production.min.js.js.js');
 } else {
-  module.exports = require('./cjs/scheduler-tracing.development.js.js');
+  module.exports = require('./cjs/scheduler-tracing.development.js.js.js');
 }
 },{"./cjs/scheduler-tracing.development.js":"../node_modules/scheduler/cjs/scheduler-tracing.development.js"}],"../node_modules/react-dom/cjs/react-dom.development.js":[function(require,module,exports) {
 /** @license React v16.8.6
@@ -25744,9 +25744,9 @@ if ("development" === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = require('./cjs/react-dom.production.min.js.js');
+  module.exports = require('./cjs/react-dom.production.min.js.js.js');
 } else {
-  module.exports = require('./cjs/react-dom.development.js.js');
+  module.exports = require('./cjs/react-dom.development.js.js.js');
 }
 },{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"../src/index.js":[function(require,module,exports) {
 "use strict";
@@ -26167,9 +26167,9 @@ if ("development" !== "production") {
 'use strict';
 
 if ("development" === 'production') {
-  module.exports = require('./cjs/react-is.production.min.js.js');
+  module.exports = require('./cjs/react-is.production.min.js.js.js');
 } else {
-  module.exports = require('./cjs/react-is.development.js.js');
+  module.exports = require('./cjs/react-is.development.js.js.js');
 }
 },{"./cjs/react-is.development.js":"../node_modules/react-is/cjs/react-is.development.js"}],"../node_modules/memoize-one/dist/memoize-one.esm.js":[function(require,module,exports) {
 "use strict";
