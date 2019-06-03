@@ -9,7 +9,7 @@
   "scripts": {
     "build": "microbundle --jsx React.createElement --sourcemap false --target web",
     "test": "jest --verbose --coverage --silent",
-    "example": "parcel ./example/index.html --out-dir docs"
+    "example": "parcel ./example/index.html --out-dir demo"
   },
   "peerDependencies": {
     "react": "^16.8.6",
