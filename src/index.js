@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 
 const style = {
   width: '100%',
-  overflowX: 'hidden',
+  overflow: 'hidden',
   cursor: 'pointer'
 }
 
