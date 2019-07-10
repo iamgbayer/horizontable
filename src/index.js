@@ -30,19 +30,23 @@ const Horizontable = ({ children }) => {
   }
 
   const onWheel = event => {
+    event.preventDefault()
     ref.current.scrollLeft += event.deltaY
   }
 
   useEffect(() => {
-    ref.current.addEventListener('mouseleave', onDown)
-    ref.current.addEventListener('mouseup', onDown)
-    ref.current.addEventListener('mousedown', onMouseDown)
-    ref.current.addEventListener('mousemove', onMouseMove)
-    ref.current.addEventListener('wheel', onWheel)
+    ref.current.addEventListener('wheel', onWheel, { passive: false })
   }, [])
 
   return (
-    <div style={style} ref={ref}>
+    <div
+      style={style}
+      ref={ref}
+      onMouseDown={onMouseDown}
+      onMouseMove={onMouseMove}
+      onMouseUp={onDown}
+      onMouseLeave={onDown}
+    >
       {children}
     </div>
   )
