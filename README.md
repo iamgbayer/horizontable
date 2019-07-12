@@ -21,6 +21,7 @@
 ## Roadmap
 - tests
 - prop to **lock drag and scroll events**
+- animation
 
 ## License
 
