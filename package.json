@@ -1,6 +1,6 @@
 {
   "name": "horizontable",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",

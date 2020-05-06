@@ -1,5 +1,6 @@
 # Horizontable
-> Horizontable is a React component to scroll with mouse wheel and drag horizontally
+
+> Horizontable is a React component to scroll with mouse wheel, drag, and touch events horizontally
 
 ## How use
 
@@ -17,10 +18,10 @@
 
 [See demo](https://horizontable.surge.sh)
 
-
 ## Roadmap
+
 - tests
-- prop to **lock drag and scroll events**
+- prop to **lock drag, touch, and scroll events**
 - animation
 
 ## License
