@@ -13,26 +13,47 @@ const Horizontable = ({ children }) => {
   let startX
   let scrollLeft
 
-  const onMouseDown = event => {
+  const onMouseDown = (event) => {
     isDown = true
     startX = event.pageX - ref.current.offsetLeft
+
+    scrollLeft = ref.current.scrollLeft
+  }
+
+  const onTouchDown = (event) => {
+    startX = event.targetTouches[0].pageX - ref.current.offsetLeft
+
     scrollLeft = ref.current.scrollLeft
   }
 
   const onDown = () => (isDown = false)
 
-  const onMouseMove = event => {
-    if (!isDown) return
+  const onTouchMove = (event) => {
+    const x = event.targetTouches[0].pageX - ref.current.offsetLeft
+    const walk = (x - startX) * 1
+
+    scrollingLeft(scrollLeft - walk)
+  }
+
+  const onMouseMove = (event) => {
+    if (!isDown) {
+      return
+    }
+
     event.preventDefault()
     const x = event.pageX - ref.current.offsetLeft
     const walk = (x - startX) * 1
-    ref.current.scrollLeft = scrollLeft - walk
+
+    scrollingLeft(scrollLeft - walk)
   }
 
-  const onWheel = event => {
+  const onWheel = (event) => {
     event.preventDefault()
-    ref.current.scrollLeft += event.deltaY
+
+    scrollingLeft(ref.current.scrollLeft + event.deltaY)
   }
+
+  const scrollingLeft = (left) => (ref.current.scrollLeft = left)
 
   useEffect(() => {
     ref.current.addEventListener('wheel', onWheel, { passive: false })
@@ -42,6 +63,8 @@ const Horizontable = ({ children }) => {
     <div
       style={style}
       ref={ref}
+      onTouchStart={onTouchDown}
+      onTouchMove={onTouchMove}
       onMouseDown={onMouseDown}
       onMouseMove={onMouseMove}
       onMouseUp={onDown}
